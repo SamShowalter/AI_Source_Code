@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>WMP Customer Segmentation</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="../static/images/icons/wmp_icon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../static/vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../static/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../static/fonts/iconic/css/material-design-iconic-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../static/vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../static/vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../static/vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../static/vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../static/vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../static/vendor/noui/nouislider.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../static/css/util.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/main.css">
+<!--===============================================================================================-->
+</head>
+<body>
+
+
+	<div class="container-contact100">
+		<div class="wrap-contact100">
+			<form class="contact100-form validate-form" method = "POST">
+				<span class="wmp-logo-image">
+					<img src = "../static/images/wmp_logo.jpg" alt = "WMP_logo" width = "800">
+				</span>
+
+				<span class="contact100-form-title">
+					WMP Customer Segmentation
+				</span>
+
+				<div class="wrap-input100 validate-input bg1" "data-validate="Please Type The Name of Your Test">
+					<span class="label-input100">NAME OF CUSTOMER SEGMENTATION TEST *</span>
+					<input class="input100" type="text" name="test_name" placeholder="Enter Your Test Name">
+				</div>
+
+				<div class="wrap-input100 validate-input bg1 rs1-wrap-input100" data-validate = "Enter Cluster Range Start">
+					<span class="label-input100">Start of Cluster Range (minimum of 2) *</span>
+					<input class="input100" type="number" name="cluster_range_start" placeholder="Enter Range Start">
+				</div>
+
+				<div class="wrap-input100 validate-input bg1 rs1-wrap-input100" data-validate = "Enter Cluster Range End">
+					<span class="label-input100">End of Cluster Range *</span>
+					<input class="input100" type="number" name="cluster_range_end" placeholder="Enter Range End">
+				</div>
+
+				<div class="wrap-input100 input100-select bg1">
+					<span class="label-input100">Choose Original Data File, must be on desktop (.csv only) *</span>
+					<div>
+						<input type="file"
+						       id="data" name="original_data"
+						       accept=".csv">
+						<div class="dropdown"></div>
+					</div>
+				</div>
+
+				<div class="wrap-input100 input100-select bg1">
+					<span class="label-input100">Choose Training Data File, must be on desktop (.csv only) *</span>
+					<div>
+						<input type="file"
+						       id="data" name="train_data"
+						       accept=".csv">
+						<div class="dropdown"></div>
+					</div>
+				</div>
+
+				<div class="wrap-input100 validate-input bg1" data-validate="Silhouette Boolean">
+					<span class="label-input100">OPTIONAL SILHOUETTE ANALYSIS (Not recommended for >50k row data) *			</span>
+					<select type = "js-select2" name="silhouette_boolean">
+					  <option value="False">NO</option>
+					  <option value="True">YES</option>
+					  <div class="dropDownSelect2"></div>
+					</select>
+				</div>
+
+				<div class="wrap-input100 bg1 rs1-wrap-input100">
+					<span class="label-input100">Start of Silhouette Range (minimum of 2)</span>
+					<input class="input100" type="number" name="silhouette_range_start" placeholder="Enter Range Start">
+				</div>
+
+				<div class="wrap-input100  bg1 rs1-wrap-input100">
+					<span class="label-input100">End of Silhouette Range</span>
+					<input class="input100" type="number" name="silhouette_range_end" placeholder="Enter Range End">
+				</div>
+
+
+
+
+				<div class="container-contact100-form-btn">
+					<button class="contact100-form-btn">
+						<span>
+							Run Customer Segmentation
+							<i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
+						</span>
+					</button>
+				</div>
+
+			</form>
+		</div>
+	</div>
+
+
+<!--===============================================================================================-->
+	<script src="../static/vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="../static/js/main.js"></script>
+
+
+</body>
+</html>
